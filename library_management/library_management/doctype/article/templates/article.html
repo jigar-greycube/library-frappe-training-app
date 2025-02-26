@@ -1,0 +1,14 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-8"></div>
+</div>
+
+<img src={{doc.image}} alt="" height="300" width="400">
+<h1>{{ title }}</h1>
+<p>{{ doc.description }}</p>
+{% endblock %}
+
+<!-- this is a sample default web page template -->

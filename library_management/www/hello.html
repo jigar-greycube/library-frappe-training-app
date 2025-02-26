@@ -1,0 +1,82 @@
+{%- extends "templates/web.html" -%}
+
+{%- block page_content -%}
+    <h1>Hello</h1>
+    <button class="confetti-btn">Load JS Confetti</button>
+    <button class="confetti-btn-ts">Load TS Particles Confetti</button>
+{%- endblock -%}
+
+{%- block script -%}
+    {{ include_script('library_dashboard.bundle.js') }}
+    {{ include_script('library_tsparticles.bundle.js') }}
+{%- endblock -%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h1>Hello</h1>
+<button class="confetti-btn" onclick="run_confetti()">Load JS Confetti</button>
+<button class="confetti-btn-ts" onclick="run_confetti_ts()">Load TS Particles Confetti</button>
+
+
+<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+
+<script>
+    const run_confetti = () => {
+        const jsConfetti = new JSConfetti();
+        jsConfetti.addConfetti();
+    }
+
+    const run_confetti_ts = () => {
+        confetti({
+            ...defaults,
+            particleCount: 40,
+            scalar: 1.2,
+            shapes: ["star"],
+        });
+    }
+
+    const defaults = {
+        spread: 360,
+        ticks: 50,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+        shapes: ["star"],
+        colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
+    };
+</script> -->

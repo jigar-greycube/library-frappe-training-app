@@ -1,0 +1,38 @@
+{%- extends "templates/web.html" -%}
+
+{%- block header -%}
+    <h1>Documentation</h1>
+{%- endblock -%}
+
+{%- block page_content -%}
+
+Welcome to Frappe Framework Documentation.
+Frappe, pronounced fra-pay, is a full stack, batteries-included, web framework written in Python and Javascript with MariaDB as the database. It is the framework which powers ERPNext, is pretty generic and can be used to build database driven apps.
+
+<!--  We can also define this in separate python file -->
+{%- set articles = frappe.db.get_all("Article", "*") -%} 
+
+<div class="row mt-6">
+    {%- for article in articles -%}
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-text">
+                        <h5>{{article.article_name}}</h5>
+                        <h5 class="text-secondary">{{ article.author }}</h5>
+                        {%- if article.status == 'Available' -%}
+                            <p class="badge badge-success p-2">{{ article.status }}</p>
+                        {%- else -%}
+                            <p class="badge badge-info p-2">{{ article.status }}</p>
+                        {%- endif -%}
+                    </div>
+                    <div class="card-text">
+                        <a href="/article/{{ article.name }}">Go to Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {%- endfor -%}
+</div>
+
+{%- endblock -%}
