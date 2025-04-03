@@ -249,3 +249,11 @@ app_license = "mit"
 website_route_rules = [
     {"from_route": "/article/<article_name>", "to_route":"article"} 
 ]
+
+extend_bootinfo = "library_management.extend.boot_session"
+
+# on_login = "library_management.extend.successful_login"
+
+fixtures  = [
+    'Custom Field'
+]
